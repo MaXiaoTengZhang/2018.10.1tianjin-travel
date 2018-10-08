@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery实现弹性TN3相册代码</title>
+<link type="text/css" rel="stylesheet" href="css/jq22.css"></link>
+</head>
+<body>
+<!-- 代码 开始 -->
+<div id="content">
+    <div class="mygallery clearfix">
+	<div class="tn3 album">
+	    <h4>Fixed Dimensions</h4>
+	    <div class="tn3 description">Images with fixed dimensions</div>
+	    <div class="tn3 thumb">images/620x378/1.png</div>
+	    <ol>
+	    	<li>
+		    <h4>大豆玩沙土呢</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/2.jpg">
+			<img src="images/2.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>我们一家的足迹</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/3.jpg">
+			<img src="images/3.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>夫妻合影</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/4.jpg">
+			<img src="images/4.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>老妈</h4>
+		    <div class="tn3 description">天津运河, 天津</div>
+		    <a href="images/14.jpg">
+			<img src="images/14.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>大豆跟他爷爷奶奶的合影</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/5.jpg">
+			<img src="images/5.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>我的背影</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/1.jpg">
+			<img src="images/1.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>回去路上的夕阳，老刺眼了</h4>
+		    <div class="tn3 description">高速上, 天津</div>
+		    <a href="images/6.jpg">
+			<img src="images/6.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>天津之眼，第一次看见</h4>
+		    <div class="tn3 description">天津之眼, 天津</div>
+		    <a href="images/7.jpg">
+			<img src="images/7.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>晚上的天津之眼，着实漂亮</h4>
+		    <div class="tn3 description">天津之眼, 天津</div>
+		    <a href="images/8.jpg">
+			<img src="images/8.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>天津运河</h4>
+		    <div class="tn3 description">天津之眼, 天津</div>
+		    <a href="images/9.jpg">
+			<img src="images/9.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>媳妇儿的正面照</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/10.jpg">
+			<img src="images/10.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>凉椅上舒服不？</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/11.jpg">
+			<img src="images/11.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>老妈飞要扶着大旗来一张</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/12.jpg">
+			<img src="images/12.jpg" />
+		    </a>
+		</li>
+		<li>
+		    <h4>我们这一家子，拍的不太好看</h4>
+		    <div class="tn3 description">东江湾, 天津</div>
+		    <a href="images/13.jpg">
+			<img src="images/13.jpg" />
+		    </a>
+		</li>
+	    </ol>
+	</div>
+    </div>
+</div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/jquery.tn3lite.min.js"></script>
+<script>
+$(document).ready(function() {
+	var tn1 = $('.mygallery').tn3({
+		skinDir:"skins",
+		imageClick:"fullscreen",
+		image:{
+		maxZoom:1.5,
+		crop:true,
+		clickEvent:"dblclick",
+		transitions:[{
+		type:"blinds"
+		},{
+		type:"grid"
+		},{
+		type:"grid",
+		duration:460,
+		easing:"easeInQuad",
+		gridX:1,
+		gridY:8,
+		// flat, diagonal, circle, random
+		sort:"random",
+		sortReverse:false,
+		diagonalStart:"bl",
+		// fade, scale
+		method:"scale",
+		partDuration:360,
+		partEasing:"easeOutSine",
+		partDirection:"left"
+		}]
+		}
+	});
+});
+</script>
+<!-- 代码 结束 -->
+
+</body>
+</html>
